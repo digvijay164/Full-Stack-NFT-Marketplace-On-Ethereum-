@@ -15,7 +15,7 @@ import { Button } from '@/components/componentsIndex.js'
 import styles from './Sidebar.module.css'
 import Link from 'next/link'
 
-const Sidebar = ({setOpenSideMenu}) => {
+const Sidebar = ({ setOpenSideMenu }) => {
   const [openDiscover, setOpenDiscover] = useState(false);
   const [openHelp, setOpenHelp] = useState(false);
   const discover = [
@@ -72,30 +72,30 @@ const Sidebar = ({setOpenSideMenu}) => {
     },
   ];
 
-  const openDiscoverMenu = ()=>{
-    if(!openDiscover){
+  const openDiscoverMenu = () => {
+    if (!openDiscover) {
       setOpenDiscover(true);
-    }else{
+    } else {
       setOpenDiscover(false);
     }
   }
 
-  const openHelpMenu = ()=>{
-    if(!openHelp){
+  const openHelpMenu = () => {
+    if (!openHelp) {
       setOpenHelp(true);
-    }else{
+    } else {
       setOpenHelp(false);
     }
   }
 
-  const closeSidebar = ()=>{
+  const closeSidebar = () => {
     setOpenSideMenu(false);
   }
 
   return (
     <div className={styles.sidebar}>
       <GrClose
-        className={styles.sidebar_close_btn}
+        className={styles.sidebar_closeBtn}
         onClick={() => closeSidebar()}
       />
       <div className={styles.sidebar_box}>
