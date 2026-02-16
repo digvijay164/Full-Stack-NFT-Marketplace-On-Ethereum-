@@ -169,7 +169,7 @@ const Navbar = () => {
                     {/* END OF RIGHT SECTION */}
                 </div>
                 {/* end of navbar container */}
-                {/* SODEBAR COMPONENT */}
+                {/* SIDEBAR COMPONENT */}
                 {
                     openSideMenu && (
                         <div className={styles.Sidebar}>
@@ -177,7 +177,7 @@ const Navbar = () => {
                         </div>
                     )
                 }
-                {/* END OF SODEBAR COMPONENT */}
+                {/* END OF SIDEBAR COMPONENT */}
             </div>
         </>
     )
