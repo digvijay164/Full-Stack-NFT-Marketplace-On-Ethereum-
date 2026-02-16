@@ -3,7 +3,7 @@
     flex-direction: column;
 }
 
-.helpcenter {
+.helpcenter_item {
     padding: .5rem 1rem;
     transition: all .3s ease-in;
     z-index: 22222222;

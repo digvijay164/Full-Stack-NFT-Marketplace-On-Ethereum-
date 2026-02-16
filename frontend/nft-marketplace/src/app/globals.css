@@ -39,6 +39,10 @@
   -webkit-tap-highlight-color: none;
 }
 
+a{
+  text-decoration: none;
+  color: black;
+}
 
 html,
 body {
