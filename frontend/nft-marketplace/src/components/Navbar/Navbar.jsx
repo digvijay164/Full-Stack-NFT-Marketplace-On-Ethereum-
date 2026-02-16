@@ -86,11 +86,11 @@ const Navbar = () => {
                         {/* Discover Menu END */}
 
                         {/* HELP CENTER MENU */}
-                        <div className={styles.navbar_container_right_discover}>
+                        <div className={styles.navbar_container_right_help}>
                             <p onClick={(e) => openMenu(e)}>Help Center</p>
                             {help && (
-                                <div className={styles.navbar_container_right_discover_box}>
-                                    <Discover />
+                                <div className={styles.navbar_container_right_help_box}>
+                                    <HelpCenter />
                                 </div>
                             )}
                         </div>
