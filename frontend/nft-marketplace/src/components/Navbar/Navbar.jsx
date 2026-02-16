@@ -11,16 +11,17 @@ import {
     Sidebar
 } from './index'
 import images from '../../img'
-import { mdNotifications } from 'react-icons/md'
+import { MdNotifications, mdNotifications } from 'react-icons/md'
 import { BsSearch } from 'react-icons/bs'
 import { CgMenuLeft, CgMenuRight } from 'react-icons/cg'
 import { use } from 'chai'
+import Button from '../Button/Button'
 const Navbar = () => {
     const [discover, setDiscover] = useState(false);
     const [help, setHelp] = useState(false);
     const [notification, setNotification] = useState(false);
     const [profile, setProfile] = useState(false);
-    const [openSideMenu, setSideMenu] = useState(false);
+    const [openSideMenu, setOpenSideMenu] = useState(false);
 
     const openMenu = (e) => {
         const btnText = e.target.innerText;
@@ -39,6 +40,38 @@ const Navbar = () => {
             setHelp(false);
             setNotification(false);
             setProfile(false);
+        }
+    }
+
+    const openNotification = () => {
+        if (!notification) {
+            setNotification(true);
+            setDiscover(false);
+            setHelp(false);
+            setProfile(false);
+        } else {
+            setNotification(false);
+        }
+    }
+    const openProfile = () => {
+        if (!profile) {
+            setProfile(true);
+            setNotification(false);
+            setDiscover(false);
+            setHelp(false);
+        } else {
+            setProfile(false);
+        }
+    }
+    const openSideBar = () => {
+        if (!openSideMenu) {
+            setOpenSideMenu(true);
+            setProfile(false);
+            setNotification(false);
+            setDiscover(false);
+            setHelp(false);
+        } else {
+            setOpenSideMenu(false);
         }
     }
 
@@ -95,10 +128,56 @@ const Navbar = () => {
                             )}
                         </div>
                         {/* END OF HELP CENTER MENU */}
+                        {/* NOTIFICATION MENU */}
+                        <div className={styles.navbar_container_right_notify}>
+                            <MdNotifications
+                                className={styles.notify}
+                                onClick={() => openNotification()}
+                            />
+                            {notification && <Notification />}
+                        </div>
+                        {/* END OF Notification Meun */}
+                        {/* Create Button Section */}
+                        <div className={styles.navbar_container_right_button}>
+                            <Button btnText="Create" />
+                        </div>
+                        {/* End of Button Section */}
+                        {/* USER PROFILE */}
+                        <div className={styles.navbar_container_right_profile_box}>
+                            <div className={styles.navbar_container_right_profile}>
+                                <Image
+                                    src={images.user1}
+                                    alt="User Profile"
+                                    width={40}
+                                    height={40}
+                                    onClick={() => openProfile()}
+                                    className={styles.navbar_container_right_profile}
+                                />
+                            </div>
+                            {profile && <Profile />}
+                        </div>
+                        {/* END OF USER PROFILE */}
+                        {/* MENU BITTON */}
+                        <div className={styles.navbar_container_right_menuBtn}>
+                            <CgMenuRight
+                                className={styles.menuIcon}
+                                onClick={() => openSideBar()}
+                            />
+                        </div>
+                        {/* END OFMENU BITTON */}
                     </div>
                     {/* END OF RIGHT SECTION */}
                 </div>
                 {/* end of navbar container */}
+                {/* SODEBAR COMPONENT */}
+                {
+                    openSideMenu && (
+                        <div className={styles.Sidebar}>
+                            <Sidebar setOpenSideMenu={setOpenSideMenu} />
+                        </div>
+                    )
+                }
+                {/* END OF SODEBAR COMPONENT */}
             </div>
         </>
     )
