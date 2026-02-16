@@ -1,0 +1,16 @@
+.helpcenter {
+    display: flex;
+    flex-direction: column;
+}
+
+.helpcenter {
+    padding: .5rem 1rem;
+    transition: all .3s ease-in;
+    z-index: 22222222;
+}
+
+.helpcenter_item:hover {
+    background-color: var(--icons-color); 
+    color: var(--shadow-dark-color);
+    border-radius: .3rem;
+}

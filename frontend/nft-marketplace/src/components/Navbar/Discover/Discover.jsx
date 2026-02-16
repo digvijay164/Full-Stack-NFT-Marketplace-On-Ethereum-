@@ -39,7 +39,7 @@ const Discover = () => {
           return (
             <div
               key={i + 1}
-              className={styles.discover}
+              className={styles.discover_item}
             >
               <Link href={{ pathname: `${el.link}` }}>{el.name}</Link>
             </div>

@@ -31,7 +31,7 @@ const HelpCenter = () => {
           return (
             <div
               key={i + 1}
-              className={styles.helpcenter}
+              className={styles.helpcenter_item}
             >
               <Link href={{ pathname: `${el.link}` }}>{el.name}</Link>
             </div>
