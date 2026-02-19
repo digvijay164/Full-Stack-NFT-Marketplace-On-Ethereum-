@@ -1,6 +1,7 @@
 .sidebar_box{
     padding: 2rem;
     border-bottom: 1px solid var(--icons-color);
+    background-color: var(--main-bg-color);
 }
 .sidebar_closeBtn{
     position: absolute;
@@ -14,7 +15,8 @@
     transform: rotate(45deg);
 }
 .sidebar_box p{
-    margin-top: -2rem;
+    /* margin-top: -2rem; */
+    /* line-height: 1.6rem; */
 }
 .sidebar_social{
     display: flex;
