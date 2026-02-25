@@ -139,7 +139,7 @@ const Navbar = () => {
                         {/* END OF Notification Meun */}
                         {/* Create Button Section */}
                         <div className={styles.navbar_container_right_button}>
-                            <Button btnText="Create" />
+                            <Button btnText="Create" handleComponent={()=>{}}/>
                         </div>
                         {/* End of Button Section */}
                         {/* USER PROFILE */}

@@ -1,4 +1,5 @@
-import React, { useState } from 'react'
+"use client"
+import { useState } from 'react'
 import Image from 'next/image'
 import { GrClose } from 'react-icons/gr'
 import {
@@ -159,8 +160,8 @@ const Sidebar = ({ setOpenSideMenu }) => {
         </div>
       </div>
       <div className={styles.sidebar_button}>
-        <Button btnText="Create" />
-        <Button btnText="Connect Wallet" />
+        <Button btnText="Create" handleComponent={() => { }} />
+        <Button btnText="Connect Wallet" handleComponent={() => { }} />
       </div>
     </div>
   )

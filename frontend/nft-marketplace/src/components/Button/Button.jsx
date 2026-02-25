@@ -1,9 +1,13 @@
 import React from 'react'
+import styles from "./Button.module.css"
 
-const Button = () => {
+const Button = ({ btnText, handleComponent }) => {
   return (
-    <div>
-      
+    <div className={styles.box}>
+      <button
+        className={styles.button}
+        onClick={() => { handleComponent() }}
+      >{btnText}</button>
     </div>
   )
 }
